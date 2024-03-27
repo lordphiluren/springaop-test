@@ -39,7 +39,7 @@ public class LoggingAspect {
     }
     @AfterThrowing(pointcut = "callAtService()", throwing = "e")
     public void afterThrowingCallAtUserService(JoinPoint joinPoint, RuntimeException e) {
-        log.error("{} threw exception=[{}] with message=[{}]", joinPoint, e.toString(), e.getMessage());
+        log.error("{} threw exception=[{}] with message=[{}]", joinPoint, e.toString());
     }
     @AfterReturning(value = "execution(* ru.sushchenko.springaopapp.service.UserService.deleteUser(..)) && args(userId)")
     public void afterUserDeleted(Long userId) {
