@@ -10,15 +10,15 @@
 ### Логика логирования
 Логи выводятся в консоль
 Реализованы следующие виды логов:
-- Логи для всех методов сервисов, выводящие вызванные метод, входные параметры
+- Логи для всех методов сервисов, которые выводят название вызванного метода метод и его входные параметры
 ```
 INFO Before execution(User ru.sushchenko.springaopapp.service.UserService.addUser(User)), args=[User(id=null, name=Alice, email=alice@example.com)]
 ```
-- Логи для всех методов сервисов, выводящие вызванные метод, возвращенное значение
+- Логи для всех методов сервисов, которые выводят название вызванного метода и возвращенное значение
 ```
 INFO After execution(User ru.sushchenko.springaopapp.service.UserService.addUser(User)), returns=[User(id=1, name=Alice, email=alice@example.com)]
 ```
-- Логи, которые выводят информацию об обновлении сущности, реализованая аннотация UpdateAnnotation
+- Логи, которые выводят информацию об обновлении сущности, реализована аннотация UpdateAnnotation, которой помечаются методы для обновления
 ```
 INFO User with id: 2, updated: User(id=2, name=UPDATED NAME, email=bob@example.com)
 ```
